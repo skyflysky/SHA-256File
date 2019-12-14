@@ -54,6 +54,8 @@ public class Worker implements Runnable
 			md.reset();
 			f = util.getNextFile();
 		}
+		System.out.println("Ïß³ÌÍê±Ï");
+		return;
 	}
 
 	private char[] toHex(byte[] data)
