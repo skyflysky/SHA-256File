@@ -10,9 +10,9 @@ public class Mainer
 {
 	public static void main(String[] args)
 	{
-		ExecutorService threadPool = Executors.newFixedThreadPool(Integer.valueOf(10),new SkyThreadFactory());
-		Util util = new Util("I:\\game");
-		for (int i = 0; i < Integer.valueOf(10); i++)
+		ExecutorService threadPool = Executors.newFixedThreadPool(Integer.valueOf(args[1]),new SkyThreadFactory());
+		Util util = new Util(args[0]);
+		for (int i = 0; i < Integer.valueOf(args[1]); i++)
 		{
 			threadPool.execute(new Worker(util));
 		}
