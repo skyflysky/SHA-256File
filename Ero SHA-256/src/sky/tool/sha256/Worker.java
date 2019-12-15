@@ -32,8 +32,8 @@ public class Worker implements Runnable
 	public void run()
 	{
 		md.reset();
-		File f = util.getNextFile();
-		while(f != null)
+		File f ;
+		while((f = util.getNextFile()) != null)
 		{
 			try
 			{
@@ -52,7 +52,6 @@ public class Worker implements Runnable
 			}
 			System.out.println(new String(toHex(md.digest())));
 			md.reset();
-			f = util.getNextFile();
 		}
 		System.out.println("Ïß³ÌÍê±Ï");
 		return;
